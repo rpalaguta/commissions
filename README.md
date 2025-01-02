@@ -12,8 +12,10 @@ A simple script to calculate commission rates for user operations.
    ```bash
    composer install
    ```
+   
+2. Make a copy of .env.example and rename it to .env, then add your credentials where needed
 
-2. Run the script:
+3. Run the script:
    ```bash
    php script.php input.csv
    ```
