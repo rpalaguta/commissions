@@ -17,6 +17,7 @@ class ApiClient
 
 	public function getRequest(string $endpoint = '', string $params = ''): string
 	{
+		// Send a GET request to the API
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, "$this->apiUrl/$endpoint?access_key=$this->apiKey".$params);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -33,6 +34,7 @@ class ApiClient
 
 	public function getAllRates(): array
 	{
+		// Fetch the latest rates from the API
 		$response = $this->getRequest('latest');
 		$rates = json_decode($response, true);
 

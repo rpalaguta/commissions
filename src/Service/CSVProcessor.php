@@ -23,6 +23,7 @@ class CSVProcessor
 
 	public function processFile(string $inputFile): void
 	{
+		// Check if the file exists
 		if (!file_exists($inputFile)) {
 			echo "File not found: $inputFile\n";
 			exit(1);
